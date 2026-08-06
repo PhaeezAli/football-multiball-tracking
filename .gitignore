@@ -1,0 +1,54 @@
+# ---------------------------------------------------------------------------
+# Source footage and everything derived from it.
+# The two test videos came from a private assignment dataset and are not ours
+# to redistribute; dataset/ is frames extracted from them, so it goes too.
+# ---------------------------------------------------------------------------
+vdo/
+dataset/
+football_yolo_dataset.zip
+*.mp4
+*.mov
+*.avi
+
+# ---------------------------------------------------------------------------
+# Model weights.
+# yolov8*.pt / yolo11*.pt are pretrained checkpoints ultralytics re-downloads
+# on demand — never version them (yolov8x.pt alone is 131 MB, over GitHub's
+# 100 MB hard limit). Our own football_best.pt is 39 MB: ship it as a Release
+# asset rather than a git blob, so history stays clonable.
+# ---------------------------------------------------------------------------
+*.pt
+*.pth
+*.onnx
+*.engine
+
+# ---------------------------------------------------------------------------
+# Training / inference artifacts — regenerable, and full of large images.
+# ---------------------------------------------------------------------------
+runs/
+*.cache
+
+# ---------------------------------------------------------------------------
+# Documents: personal (résumé) and third-party (the assignment brief itself).
+# Neither belongs in a public repo.
+# ---------------------------------------------------------------------------
+*.pdf
+
+# ---------------------------------------------------------------------------
+# Python
+# ---------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+
+# ---------------------------------------------------------------------------
+# OS / editor / tooling
+# ---------------------------------------------------------------------------
+.DS_Store
+.vscode/
+.idea/
+.claude/
